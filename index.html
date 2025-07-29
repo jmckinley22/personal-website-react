@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jackson McKinley – Personal Portfolio</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Load React and ReactDOM from a CDN -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- Load Babel to transpile JSX in the browser -->
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- Root element where our React app will mount -->
+    <div id="root"></div>
+
+    <!-- Main React application code. We use type="text/babel" so the browser will
+         transpile JSX on the fly using Babel. This makes development simpler and
+         avoids the need for a build step. The code is inlined here rather than
+         referenced from an external file to avoid cross‑origin restrictions
+         when viewing the page locally. -->
+    <script type="text/babel">
+      /*
+       * Main React application for Jackson McKinley's personal portfolio.
+       * Each section of the resume is encapsulated in its own component.
+       */
+
+      const ResumeLink = () => (
+        <p className="resume-link">
+          <a
+            href="./7_24_McKinley_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download my full resume
+          </a>
+        </p>
+      );
+
+      const AboutSection = () => (
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            Recent college graduate with a B.S. in Applied and Computational
+            Mathematics from the University of Southern California. I have
+            internship experience in web app development and data science
+            projects, with proficiency in object‑oriented programming and
+            artificial intelligence tools. I am passionate about creative
+            direction and large‑scale event coordination and eager to grow my
+            skills as a problem‑solver.
+          </p>
+        </section>
+      );
+
+      const EducationSection = () => (
+        <section id="education">
+          <h2>Education</h2>
+          <h3>University of Southern California</h3>
+          <p>
+            <strong>B.S. in Applied and Computational Mathematics</strong> – May
+            2025
+          </p>
+          <p>
+            Relevant coursework: Machine Learning, Statistics, Probability,
+            Numerical Methods, Linear Algebra, Calculus, Mechanics,
+            Differential Equations, Combinatorics, Number Theory, Real
+            Analysis, Problem Solving.
+          </p>
+        </section>
+      );
+
+      const ExperienceSection = () => (
+        <section id="experience">
+          <h2>Experience</h2>
+          <div className="job">
+            <h3>Pfizer Inc – Data Science Intern</h3>
+            <p className="date">May 2024 – August 2024</p>
+            <ul>
+              <li>
+                Collaborated with the Research and Development team to migrate
+                web applications from JupyterHub to the DataIku platform,
+                streamlining credential verification and modernising user
+                interfaces.
+              </li>
+              <li>
+                Developed MoKa tool integrations to model and predict
+                ionisable sites, calculate pKa and pH, and identify stable
+                tautomers for documented compounds.
+              </li>
+              <li>
+                Wrote internal documentation for the experimental Python
+                front‑end app development process.
+              </li>
+            </ul>
+          </div>
+          <div className="job">
+            <h3>University of Southern California – Tutor</h3>
+            <p className="date">August 2022 – May 2025</p>
+            <ul>
+              <li>
+                Tutored undergraduate students in mathematics and physics across
+                15 distinct courses.
+              </li>
+              <li>
+                Guided exam preparation for over 40 students in Calculus,
+                Classical Mechanics, Linear Algebra and Statistics.
+              </li>
+            </ul>
+          </div>
+        </section>
+      );
+
+      const LeadershipSection = () => (
+        <section id="leadership">
+          <h2>Leadership & Activities</h2>
+          <div className="leadership-role">
+            <h3>USC Society 53 – Vice President of Special Events</h3>
+            <p className="date">April 2024 – May 2025</p>
+            <ul>
+              <li>
+                Supervised an 8‑person executive board governing the Student
+                Alumni Association.
+              </li>
+              <li>
+                Developed more than 15 signature events to engage students
+                with local USC alumni.
+              </li>
+            </ul>
+          </div>
+          <div className="leadership-role">
+            <h3>USC Varsity Sailing – Social Chair</h3>
+            <p className="date">August 2022 – May 2025</p>
+            <ul>
+              <li>
+                Harbor Cup Champion 2025 and runner‑up 2024; served as
+                foredeck crew and mast man.
+              </li>
+              <li>
+                Competed in over 30 intercollegiate regattas in Catalina 37,
+                E420 and FJ class boats.
+              </li>
+              <li>
+                Organised social gatherings and networking events for a
+                20‑member team in the PCCSC conference.
+              </li>
+            </ul>
+          </div>
+          <div className="leadership-role">
+            <h3>Phi Sigma Kappa – Creative Director</h3>
+            <p className="date">January 2023 – January 2024</p>
+            <ul>
+              <li>
+                Managed a $200k annual social committee budget and oversaw a
+                25‑member committee.
+              </li>
+              <li>
+                Established and maintained more than 20 brand deals and
+                sponsorships with product distribution partners.
+              </li>
+              <li>
+                Implemented “green kitchen” initiatives to eliminate
+                single‑use plastics and Styrofoam in the house.
+              </li>
+            </ul>
+          </div>
+        </section>
+      );
+
+      const SkillsSection = () => (
+        <section id="skills">
+          <h2>Skills & Interests</h2>
+          <p>
+            <strong>Software:</strong> Python, R, C++, Linux, SQL, MATLAB,
+            Fusion, Power BI, Tableau, Microsoft Office Suite, Docker,
+            TensorFlow, Scikit‑learn, CuPy, PyTorch, Pandas, Cursor,
+            Chat‑GPT, Claude, Cura, LaTeX, JupyterHub
+          </p>
+          <p>
+            <strong>Awards:</strong> BSA Eagle Scout; Connecticut TSA Structural
+            Engineering & Design Challenge champion (2019, 2022)
+          </p>
+          <p>
+            <strong>Extracurriculars:</strong> SOA Student Research Challenge,
+            Dornsife Student Ambassador, Math Club
+          </p>
+          <p>
+            <strong>Hobbies:</strong> 3D printing, chess, gardening, mahjong,
+            pottery, Raspberry Pi/Arduino, sailing, tea culture, woodworking
+          </p>
+        </section>
+      );
+
+      const ContactSection = () => (
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            <strong>Phone:</strong>{' '}
+            <a href="tel:+18608863538">860‑886‑3538</a>
+          </p>
+          <p>
+            <strong>Email:</strong>{' '}
+            <a href="mailto:jackson.t.mckinley@gmail.com">
+              jackson.t.mckinley@gmail.com
+            </a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>{' '}
+            <a
+              href="https://www.linkedin.com/in/jackson-mckinley"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/jackson‑mckinley
+            </a>
+          </p>
+        </section>
+      );
+
+      const Header = () => (
+        <header>
+          <h1>Jackson T. McKinley</h1>
+          <h4>Applied &amp; Computational Mathematics Graduate</h4>
+        </header>
+      );
+
+      const App = () => (
+        <div>
+          <Header />
+          <AboutSection />
+          <EducationSection />
+          <ExperienceSection />
+          <LeadershipSection />
+          <SkillsSection />
+          <ContactSection />
+          <ResumeLink />
+        </div>
+      );
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
